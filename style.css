@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input{
+    font-size: 48px;
+}
+p {
+    font-size: 24px;
+}
+
+li {
+    list-style: none;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.wrapper {
+    background-color: #C4C4C4;
+    padding: 20px;
+    width: 661px;
+    height: 763px;
+    margin: 70px auto;
+    overflow-y: auto;
+}
+
+.wrapper .search-input {
+    width: 500px;
+    margin: auto;
+}
+
+.search-input input {
+    color: black;
+    border: none;
+    padding: 10px;
+    width: 500px;
+    height: 61px;
+    outline: none;
+}
+
+.search-input .auto-box {
+    /* padding: 10px; */
+    overflow-y: auto;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.search-input li {
+    list-style: none;
+    width: 100%;
+    cursor: default;
+    border: 2px solid #000;
+    background: #E3E3E3;
+    display: none;
+}
+
+.search-input.active .auto-box {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.search-input.active .auto-box li {
+    padding: 10px;
+    display: block;
+}
+
+.results {
+    width: 500px;
+    margin: auto;
+}
+
+#addedRepositories {
+    color: black;
+    border: none;
+    width: 500px;
+    outline: none;
+}
+
+.search-input.active #addedRepositories {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.search-input.active #addedRepositories li {
+    padding: 10px;
+    display: block;
+}
+
+#addedRepositories .repositorys:first-child() {
+    margin-top: 30px;
+}
+
+.results #addedRepositories .repositorys{
+    border: 1px solid #000;
+    background: #E27BEB;
+    padding: 10px;
+}
+
+.repositorys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-input li:hover {
+    background-color: #65CDF9;
+}
+
+.delete-btn {
+    border: none;
+    width: 42px;
+    height: 38.5px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .delete-btn:before,
+  .delete-btn:after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: red;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+  }
+  
+  .delete-btn:before {
+    transform: rotate(45deg);
+  }
+  
+  .delete-btn:after {
+    transform: rotate(-45deg);
+  }
+  
